@@ -118,11 +118,11 @@ export default function Projects() {
               }}
               className="cursor-pointer group bg-gray-900 rounded-2xl overflow-hidden shadow-xl hover:shadow-blue-500/20 transition duration-500"
             >
-              <div className="relative overflow-hidden">
+              <div className="relative bg-gray-800 flex items-center justify-center h-56 overflow-hidden">
                 <img
                   src={project.screenshots[0]}
                   alt={project.title}
-                  className="w-full h-56 object-cover transform group-hover:scale-110 transition duration-700"
+                  className="max-w-full max-h-full object-contain group-hover:scale-105 transition duration-500"
                 />
               </div>
 
@@ -158,11 +158,13 @@ export default function Projects() {
             </button>
 
             {/* MAIN IMAGE */}
+            <div className="bg-gray-800 rounded-xl mb-4">
             <img
               src={selectedProject.screenshots[activeImage]}
               alt="Project Screenshot"
-              className="w-full h-72 object-cover rounded-xl mb-4 transition duration-300"
+              className="w-full max-h-[70vh] object-contain transition duration-300"
             />
+            </div>
 
             {/* THUMBNAILS */}
             <div className="flex gap-3 mb-6 overflow-x-auto">
